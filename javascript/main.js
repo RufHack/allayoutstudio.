@@ -22,8 +22,7 @@ document.querySelectorAll(".btnDetail").forEach((item) => {
     document.querySelector(".modalHarga").innerHTML = harga;
 
     const nohp = "+62 895-3976-33383";
-    let teksPesan = `Permisi Kak...
-    Saya ingin memesan *${judul.trim()}* dengan harga *${harga.trim()}*. Apakah masih tersedia?`;
+    let teksPesan = `Permisi Kak... Saya ingin memesan *${judul.trim()}* dengan harga *${harga.trim()}*. Apakah masih tersedia?`;
     let linkWA = `https://api.whatsapp.com/send?phone=${nohp}&text=${encodeURIComponent(
       teksPesan
     )}`;
