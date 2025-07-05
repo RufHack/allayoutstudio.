@@ -4,7 +4,7 @@ document.querySelectorAll(".btnDetail").forEach((item) => {
 
     let gambar = parent.querySelector(".card-img-top").src;
     let harga = parent.querySelector(".harga").innerHTML;
-    let judul = parent.querySelector('.card-text').textContent;
+    let judul = parent.querySelector(".card-text").textContent;
     let deskripsi = parent.querySelector(".deskripsi")
       ? parent.querySelector(".deskripsi").innerHTML
       : "<i>tidak ada informasi yang tersedia</i>";
@@ -22,13 +22,12 @@ document.querySelectorAll(".btnDetail").forEach((item) => {
     document.querySelector(".modalHarga").innerHTML = harga;
 
     const nohp = "+62 895-3976-33383";
-    let teksPesan = `Permisi Kak... Saya ingin memesan *${judul.trim()}* dengan harga *${harga.trim()}*. Apakah masih tersedia?`;
+    let teksPesan = `Permisi Kak... Saya ingin memesan *${judul.trim()}*. Apakah masih tersedia?`;
     let linkWA = `https://api.whatsapp.com/send?phone=${nohp}&text=${encodeURIComponent(
       teksPesan
     )}`;
     document.querySelector(".btnBeli").href = linkWA;
 
     document.querySelector(".btnBeli").href = pesan;
-    
   });
 });
